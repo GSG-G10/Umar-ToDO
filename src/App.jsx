@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Modal, Button, Form, Input, DatePicker } from "antd";
 import "antd/dist/antd.css";
 
+import Task from "./Task";
+
 import "./App.css";
 
 const App = () => {
@@ -24,7 +26,6 @@ const App = () => {
   };
 
   const handleCancel = () => {
-    console.log("Clicked cancel button");
     setVisible(false);
   };
   const onFormLayoutChange = ({ size }) => {
@@ -67,6 +68,7 @@ const App = () => {
           </Form.Item>
         </Form>
       </Modal>
+      <Task />
     </>
   );
 };
